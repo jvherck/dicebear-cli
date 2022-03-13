@@ -1,0 +1,3 @@
+[console_scripts]
+dicebear = dicebear_cli.__main__:cli
+

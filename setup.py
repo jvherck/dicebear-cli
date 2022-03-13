@@ -20,7 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 from setuptools import setup, find_packages
-from dicebear import __version__
+from dicebear_cli import __version__
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
@@ -40,7 +40,7 @@ setup(
     packages=find_packages(),
     entry_points={
         "console_scripts": [
-            "dicebear=dicebear.__main__:cli"
+            "dicebear=dicebear_cli.__main__:cli"
         ]
     },
     install_requires=['dicebear', 'click'],
