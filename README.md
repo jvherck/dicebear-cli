@@ -3,7 +3,7 @@
 [`dicebear`](https://pypi.org/project/dicebear-cli/) is a CLI for https://pypi.org/project/dicebear.
 Using this CLI you can get avatars for your program (to get customised avatars use the wrapper instead).
 \
-For an example go to [`examples/dicebear.py`](https://github.com/jvherck/dicebear-cli/tree/main/examples).
+For an example go to [`examples/dicebear.sh`](https://github.com/jvherck/dicebear-cli/tree/main/examples).
 
 ---
 
