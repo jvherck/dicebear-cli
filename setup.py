@@ -44,7 +44,7 @@ setup(
         ]
     },
     install_requires=['dicebear', 'click'],
-    keywords=['python', 'dicebear', 'avatar', 'generating', 'API', 'wrapper', 'image', 'svg', 'cli'],
+    keywords=['python', 'dicebear', 'avatar', 'generating', 'API', 'wrapper', 'image', 'svg', 'png', 'cli'],
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",

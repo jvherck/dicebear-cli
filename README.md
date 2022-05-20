@@ -31,7 +31,7 @@ dicebear --help
 dicebear create --help
 ```
 ```shell
-dicebear create avataaars -s John Apple -f svg
+dicebear create avataaars -s "John Apple" -f svg
 ```
 
 ---
