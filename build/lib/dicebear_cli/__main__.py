@@ -20,14 +20,14 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 import click
-from .__init__ import __version__
+import __init__
 from dicebear import *
 from random import choices, choice
 from string import ascii_lowercase, digits
 
 
 @click.group()
-@click.version_option(__version__, "--version", "-v")
+@click.version_option(__init__.__version__, "--version", "-v")
 def cli():
     pass
 
@@ -58,7 +58,7 @@ def create(seed, style: str, count: int, format: str):
             if count > 1 or seed is None:
                 seed = "".join(choices(ascii_lowercase + digits, k=20))
 
-            av = DAvatar(DStyle.random if style is None else DStyle.from_str(str(stylelist[x])), seed)
+            av = DAvatar(DStyle.random if style is None else DStyle.from_str(str(stylelist[x-1])), seed)
 
             if format == DFormat.png:
                 avs.append(av.url_png)

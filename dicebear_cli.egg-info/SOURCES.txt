@@ -1,5 +1,6 @@
 LICENSE
 README.md
+pyproject.toml
 setup.py
 dicebear_cli/__init__.py
 dicebear_cli/__main__.py

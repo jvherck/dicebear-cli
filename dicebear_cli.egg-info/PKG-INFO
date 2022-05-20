@@ -1,12 +1,12 @@
 Metadata-Version: 2.1
 Name: dicebear-cli
-Version: 0.2.3
+Version: 0.2.5
 Summary: A python CLI for DiceBear's avatar generating API.
 Home-page: https://github.com/jvherck/dicebear
 Author: jvherck
 Author-email: <jvh.discord@gmail.com>
 License: MIT License
-Keywords: python,dicebear,avatar,generating,API,wrapper,image,svg,cli
+Keywords: python,dicebear,avatar,generating,API,wrapper,image,svg,png,cli
 Platform: UNKNOWN
 Classifier: Development Status :: 4 - Beta
 Classifier: Intended Audience :: Developers
@@ -27,7 +27,7 @@ License-File: LICENSE
 [`dicebear`](https://pypi.org/project/dicebear-cli/) is a CLI for https://pypi.org/project/dicebear.
 Using this CLI you can get avatars for your program (to get customised avatars use the wrapper instead).
 \
-For an example go to [`examples/dicebear.py`](https://github.com/jvherck/dicebear-cli/tree/main/examples).
+For an example go to [`examples/dicebear.sh`](https://github.com/jvherck/dicebear-cli/tree/main/examples).
 
 ---
 
@@ -55,7 +55,7 @@ dicebear --help
 dicebear create --help
 ```
 ```shell
-dicebear create avataaars -s John Apple -f svg
+dicebear create avataaars -s "John Apple" -f svg
 ```
 
 ---
