@@ -25,7 +25,7 @@ If applicable, add screenshots to help explain your problem.
 
 ### **Desktop (please complete the following information):**
  - OS: [e.g. Windows]
- - Dicebear Version: [e.g. 0.2.6]
+ - Dicebear-cli Version: [e.g. 0.2.6]
  - Python Version: [e.g. 3.10]
 
 ### **Additional context**
