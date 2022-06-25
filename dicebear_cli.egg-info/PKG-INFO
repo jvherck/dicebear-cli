@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: dicebear-cli
-Version: 0.2.5
+Version: 0.2.6
 Summary: A python CLI for DiceBear's avatar generating API.
 Home-page: https://github.com/jvherck/dicebear
 Author: jvherck

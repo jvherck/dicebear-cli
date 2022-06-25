@@ -20,14 +20,14 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 import click
-import __init__
+import dicebear_cli
 from dicebear import *
 from random import choices, choice
 from string import ascii_lowercase, digits
 
 
 @click.group()
-@click.version_option(__init__.__version__, "--version", "-v")
+@click.version_option(dicebear_cli.__version__, "--version", "-v")
 def cli():
     pass
 
