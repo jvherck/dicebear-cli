@@ -1,5 +1,11 @@
 # DiceBear PIP CLI
-[![Downloads](https://static.pepy.tech/personalized-badge/dicebear?period=total&units=international_system&left_color=grey&right_color=blue&left_text=Downloads)](https://pepy.tech/project/dicebear) [![Downloads](https://static.pepy.tech/personalized-badge/dicebear?period=month&units=international_system&left_color=grey&right_color=orange&left_text=Downloads/Month)](https://pepy.tech/project/dicebear) \
+![Downloads](https://static.pepy.tech/badge/dicebear-cli)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/jvherck/dicebear-cli)
+![GitHub issues](https://img.shields.io/github/issues/jvherck/dicebear-cli)
+![GitHub](https://img.shields.io/github/license/jvherck/dicebear-cli)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/dicebear-cli)
+![Maintenance](https://img.shields.io/maintenance/yes/2024)
+\
 [`dicebear-cli`](https://pypi.org/project/dicebear-cli/) is a CLI for https://pypi.org/project/dicebear.
 Using this CLI you can get avatars for your program (to get customised avatars use the wrapper instead).
 \
