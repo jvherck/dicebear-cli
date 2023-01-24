@@ -11,7 +11,9 @@ Using this CLI you can get avatars for your program (to get customised avatars u
 \
 For an example go to [`examples/dicebear.sh`](https://github.com/jvherck/dicebear-cli/tree/main/examples).
 
+
 ---
+
 
 ## Useful links
 * Dicebear API wrapper: https://pypi.org/project/dicebear/
@@ -19,13 +21,17 @@ For an example go to [`examples/dicebear.sh`](https://github.com/jvherck/dicebea
 * Dicebear API wrapper GitHub: https://github.com/jvherck/dicebear
 * Dicebear: https://dicebear.com
 
+
 ---
+
 
 ## How to install
-Run `pip install dicebear-cli`\
+Run `pip install dicebear-cli` \
 If that doesn't work try `py -m pip install dicebear-cli`
 
+
 ---
+
 
 ## Usage
 It can quickly create one or more avatars at a time but it can't take options.
@@ -40,10 +46,12 @@ dicebear create --help
 dicebear create avataaars -s "John Apple" -f svg
 ```
 
+
 ---
-  
+
+
 ### Styles  
-All the possible avatar styles. \  
+All the possible avatar styles. \
 https://dicebear.com/styles  
   
 * `adventurer`  
@@ -69,23 +77,27 @@ https://dicebear.com/styles
 * `personas`  
 * `pixel-art`  
 * `pixel-art-neutral`
-  
+
+
 ### Formats   
-These are the only supported formats. \  
-If you have Pillow (PIL) installed you can convert `DAvatar` to a `PIL.Image.Image` object to get a   
+These are the only supported formats. \
+If you have Pillow (PIL) installed you can convert `DAvatar` to a `PIL.Image.Image` object to get a
 wider range of formats (Pillow doesn't support svg).  
   
 * `DFormat.svg` (default)  
 * `DFormat.png`  
 * `DFormat.jpg`  
 * `DFormat.json`  
-  
----  
-  
+
+
+---
+
+
 ## Credits  
-Special thanks to [DiceBear](https://github.com/dicebear) ([Florian Körner](https://github.com/FlorianKoerner)) for making this amazing API and to [all artists](https://dicebear.com/licenses) that helped   
+Special thanks to [DiceBear](https://github.com/dicebear) ([Florian Körner](https://github.com/FlorianKoerner)) for making this amazing API and to [all artists](https://dicebear.com/licenses) that helped
 making avatars!  
-  
+
+
 ## Licenses and privacy policy  
 - Dicebear **Licenses**: https://dicebear.com/licenses  
 - Dicebear **Privacy Policy**: https://dicebear.com/legal/privacy-policy  
