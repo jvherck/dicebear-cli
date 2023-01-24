@@ -1,6 +1,6 @@
 # DiceBear PIP CLI
 ![Downloads](https://static.pepy.tech/badge/dicebear-cli)
-![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/jvherck/dicebear-cli)
+![PyPI](https://img.shields.io/pypi/v/dicebear-cli)
 ![GitHub issues](https://img.shields.io/github/issues/jvherck/dicebear-cli)
 ![GitHub](https://img.shields.io/github/license/jvherck/dicebear-cli)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/dicebear-cli)
