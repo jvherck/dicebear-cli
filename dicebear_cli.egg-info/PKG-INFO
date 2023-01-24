@@ -1,13 +1,12 @@
 Metadata-Version: 2.1
 Name: dicebear-cli
-Version: 0.2.6
+Version: 1.0.2
 Summary: A python CLI for DiceBear's avatar generating API.
-Home-page: https://github.com/jvherck/dicebear
+Home-page: https://github.com/jvherck/dicebear-cli
 Author: jvherck
-Author-email: <jvh.discord@gmail.com>
+Author-email: <contact@janvh.tk>
 License: MIT License
 Keywords: python,dicebear,avatar,generating,API,wrapper,image,svg,png,cli
-Platform: UNKNOWN
 Classifier: Development Status :: 4 - Beta
 Classifier: Intended Audience :: Developers
 Classifier: Intended Audience :: Other Audience
@@ -101,4 +100,3 @@ making avatars!
 - Dicebear **Licenses**: https://avatars.dicebear.com/licenses
 - Dicebear **Privacy Policy**: https://avatars.dicebear.com/legal/privacy-policy
 - Dicebear Python CLI (this project): https://github.com/jvherck/dicebear/blob/main/LICENSE
-

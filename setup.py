@@ -19,25 +19,24 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-from setuptools import setup, find_packages
-from dicebear_cli import __version__
+from setuptools import setup
+
+__version__ = "1.0.2"
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
-
-DESCRIPTION = "A python CLI for DiceBear's avatar generating API."
 
 setup(
     name="dicebear-cli",
     version=__version__,
     license="MIT License",
     author="jvherck",
-    author_email="<jvh.discord@gmail.com>",
-    url="https://github.com/jvherck/dicebear",
-    description=DESCRIPTION,
+    author_email="<contact@janvh.tk>",
+    url="https://github.com/jvherck/dicebear-cli",
+    description="A python CLI for DiceBear's avatar generating API.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    packages=find_packages(),
+    packages=["dicebear_cli"],
     entry_points={
         "console_scripts": [
             "dicebear=dicebear_cli.__main__:cli"

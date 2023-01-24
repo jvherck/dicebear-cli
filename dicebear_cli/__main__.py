@@ -20,16 +20,13 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 import click
-import dicebear_cli
 from dicebear import *
-from random import choices, choice
-from string import ascii_lowercase, digits
 
 
 @click.group()
-@click.version_option(dicebear_cli.__version__, "--version", "-v")
-def cli():
-    pass
+@click.version_option(None, "--version", "-v")
+@click.help_option("--help", "-h")
+def cli(): pass
 
 
 @cli.command(name="create", help="Create one or more new avatars (no customising possible through CLI).")
@@ -40,46 +37,35 @@ def cli():
 @click.option("--count", "-c", show_default=True, type=click.INT, default=1,
               help="The amount of avatars to make at once (they will all have the same style and seed if you add these to the command line, "
                    "leaving these options blank will create multiple random avatars.")
-@click.option("--format", "-f", show_default=True, type=click.STRING, default=DFormat.png,
+@click.option("--format", "-f", show_default=True, type=click.STRING, default=DFormat.svg,
               help="The format of the avatar. All formats can be found on https://github.com/jvherck/dicebear#formats or `DFormat.list`")
 @click.help_option("--help", "-h")
-def create(seed, style: str, count: int, format: str):
+def create(seed: str, style: str, count: int, format: str):
     avs = []
-    # rstyle = True if style is None else False
-    stylelist = []
-    y = 1
-    while y <= count:
-        stylelist.append(choice(DStyle.list))
-        y += 1
-
     try:
-        x = 1
-        while x <= count:
-            if count > 1 or seed is None:
-                seed = "".join(choices(ascii_lowercase + digits, k=20))
-
-            av = DAvatar(DStyle.random if style is None else DStyle.from_str(str(stylelist[x-1])), seed)
-
-            if format == DFormat.png:
-                avs.append(av.url_png)
-            elif format == DFormat.svg:
-                avs.append(av.url_svg)
+        if count > 1 and style and seed:
+            click.echo("Both a style and seed have been given, generating multiple avatars just gives the same result. "
+                       "(that's why only 1 is returned)")
+            count = 1
+        for _ in range(count):
+            av = DAvatar(DStyle.random() if style is None else DStyle.from_str(str(style)), seed)
+            if format == DFormat.svg: avs.append(av.url_svg)
+            elif format == DFormat.png: avs.append(av.url_png)
+            elif format == DFormat.jpg: avs.append(av.url_jpg)
+            elif format == DFormat.json: avs.append(av.url_json)
             else:
                 log_error(ImageError("This format is not supported. Check https://github.com/jvherck/dicebear-cli#styles to see all supported formats."))
                 return
-            x += 1
     except Error as e:
         log_error(e)
         return
-    for x in avs:
-        click.echo(x)
+    for x in avs: click.echo(x)
 
 
 @cli.command(name="styles", help="See a list of all available styles.")
 @click.help_option("--help", "-h")
 def styles():
-    for style in DStyle.list:
-        click.echo(style)
+    for style in DStyle.list: click.echo(style)
 
 
 if __name__ == '__main__':
