@@ -21,7 +21,7 @@
 # SOFTWARE.
 from setuptools import setup
 
-__version__ = "1.0.2"
+__version__ = "1.0.3"
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
@@ -36,7 +36,7 @@ setup(
     description="A python CLI for DiceBear's avatar generating API.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    packages=["dicebear_cli"],
+    # packages=["dicebear_cli"],
     entry_points={
         "console_scripts": [
             "dicebear=dicebear_cli.__main__:cli"
