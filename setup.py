@@ -31,7 +31,7 @@ setup(
     version=__version__,
     license="MIT License",
     author="jvherck",
-    author_email="<contact@janvh.tk>",
+    author_email="contact@janvh.be",
     url="https://github.com/jvherck/dicebear-cli",
     description="A python CLI for DiceBear's avatar generating API.",
     long_description=long_description,
@@ -43,7 +43,12 @@ setup(
         ]
     },
     install_requires=['dicebear', 'click'],
-    keywords=['python', 'dicebear', 'avatar', 'generating', 'API', 'wrapper', 'image', 'svg', 'png', 'cli'],
+    keywords=['python', 'cli', 'dicebear', 'avatar', 'avatars', 'generating', 'generation', 'generator', 'API',
+              'wrapper', 'image', 'images', 'picture', 'pictures', 'png', 'jpg', 'svg', 'json', 'cli', 'pillow', 'pil',
+              'requests', 'adventurer', 'adventurer-neutral', 'avataaars', 'avataaars-neutral', 'big-ears',
+              'big-ears-neutral', 'big-smile', 'bottts', 'bottts-neutral', 'croodles', 'croodles-neutral', 'fun-emoji',
+              'icons', 'identicon', 'initials', 'lorelei', 'lorelei-neutral', 'micah', 'miniavs', 'open-peeps',
+              'personas', 'pixel-art', 'pixel-art-neutral', 'shapes', 'thumbs'],
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
