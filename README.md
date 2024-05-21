@@ -16,8 +16,8 @@ For an example go to [`examples/dicebear.sh`](https://github.com/jvherck/dicebea
 
 
 ## Useful links
-* Dicebear API wrapper: https://pypi.org/project/dicebear/
 * Dicebear pip CLI: https://pypi.org/project/dicebear-cli/
+* Dicebear API wrapper: https://pypi.org/project/dicebear/
 * Dicebear API wrapper GitHub: https://github.com/jvherck/dicebear
 * Dicebear: https://dicebear.com
 
@@ -27,7 +27,7 @@ For an example go to [`examples/dicebear.sh`](https://github.com/jvherck/dicebea
 
 ## How to install
 Run `pip install dicebear-cli` \
-If that doesn't work try `py -m pip install dicebear-cli`
+If that doesn't work try `python -m pip install dicebear-cli`
 
 
 ---
@@ -73,17 +73,20 @@ https://dicebear.com/styles
 * `lorelei-neutral`  
 * `micah`  
 * `miniavs`  
+* `notionists`
+* `notionists-neutral`
 * `open-peeps`  
 * `personas`  
 * `pixel-art`  
 * `pixel-art-neutral`
+* `rings`
+* `shapes`
+* `thumbs`
 
 
 ### Formats   
-These are the only supported formats. \
-If you have Pillow (PIL) installed you can convert `DAvatar` to a `PIL.Image.Image` object to get a
-wider range of formats (Pillow doesn't support svg).  
-  
+These are the only supported formats.
+
 * `DFormat.svg` (default)  
 * `DFormat.png`  
 * `DFormat.jpg`  
@@ -94,11 +97,11 @@ wider range of formats (Pillow doesn't support svg).
 
 
 ## Credits  
-Special thanks to [DiceBear](https://github.com/dicebear) ([Florian Körner](https://github.com/FlorianKoerner)) for making this amazing API and to [all artists](https://dicebear.com/licenses) that helped
-making avatars!  
+Special thanks to [DiceBear](https://github.com/dicebear) ([Florian Körner](https://github.com/FlorianKoerner)) for 
+making this amazing API and to [all artists](https://dicebear.com/licenses) for creating these avatars!  
 
 
 ## Licenses and privacy policy  
 - Dicebear **Licenses**: https://dicebear.com/licenses  
 - Dicebear **Privacy Policy**: https://dicebear.com/legal/privacy-policy  
-- Dicebear Python API wrapper (this project): https://github.com/jvherck/dicebear-cli/blob/main/LICENSE
+- Dicebear Python API wrapper (this project): https://dicebear.vhjan.me/license

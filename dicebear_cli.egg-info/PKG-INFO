@@ -1,16 +1,29 @@
 Metadata-Version: 2.1
 Name: dicebear-cli
-Version: 1.0.3
-Summary: A python CLI for DiceBear's avatar generating API.
+Version: 1.1.0
+Summary: A Python CLI for DiceBear's avatar generating API.
 Home-page: https://github.com/jvherck/dicebear-cli
 Author: jvherck
-Author-email: <contact@janvh.tk>
+Author-email: jan@vhjan.me
+Maintainer: jvherck
+Maintainer-email: jan@vhjan.me
 License: MIT License
-Keywords: python,dicebear,avatar,generating,API,wrapper,image,svg,png,cli
-Classifier: Development Status :: 4 - Beta
+Project-URL: Documentation, https://github.com/jvherck/dicebear-cli/blob/main/README.md
+Project-URL: Source, https://github.com/jvherck/dicebear-cli
+Project-URL: Tracker, https://github.com/jvherck/dicebear-cli/issues
+Keywords: python,dicebear,avatar,avatars,generating,generation,generator,API,wrapper,image,images,picture,pictures,png,jpg,svg,json,cli,pillow,pil,requests,adventurer,adventurer-neutral,avataaars,avataaars-neutral,big-ears,big-ears-neutral,big-smile,bottts,bottts-neutral,croodles,croodles-neutral,fun-emoji,icons,identicon,initials,lorelei,lorelei-neutral,micah,miniavs,notionists,notionists-neutral,open-peeps,personas,pixel-art,pixel-art-neutral,shapes,thumbs
+Classifier: Development Status :: 5 - Production/Stable
 Classifier: Intended Audience :: Developers
 Classifier: Intended Audience :: Other Audience
+Classifier: Natural Language :: English
 Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
 Classifier: Operating System :: Unix
 Classifier: Operating System :: MacOS
 Classifier: Operating System :: Microsoft :: Windows
@@ -18,6 +31,9 @@ Classifier: License :: OSI Approved :: MIT License
 Classifier: Topic :: Artistic Software
 Classifier: Topic :: Games/Entertainment
 Classifier: Topic :: Multimedia :: Graphics
+Classifier: Topic :: Other/Nonlisted Topic
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
 Description-Content-Type: text/markdown
 License-File: LICENSE
 
@@ -39,8 +55,8 @@ For an example go to [`examples/dicebear.sh`](https://github.com/jvherck/dicebea
 
 
 ## Useful links
-* Dicebear API wrapper: https://pypi.org/project/dicebear/
 * Dicebear pip CLI: https://pypi.org/project/dicebear-cli/
+* Dicebear API wrapper: https://pypi.org/project/dicebear/
 * Dicebear API wrapper GitHub: https://github.com/jvherck/dicebear
 * Dicebear: https://dicebear.com
 
@@ -50,7 +66,7 @@ For an example go to [`examples/dicebear.sh`](https://github.com/jvherck/dicebea
 
 ## How to install
 Run `pip install dicebear-cli` \
-If that doesn't work try `py -m pip install dicebear-cli`
+If that doesn't work try `python -m pip install dicebear-cli`
 
 
 ---
@@ -96,17 +112,20 @@ https://dicebear.com/styles
 * `lorelei-neutral`  
 * `micah`  
 * `miniavs`  
+* `notionists`
+* `notionists-neutral`
 * `open-peeps`  
 * `personas`  
 * `pixel-art`  
 * `pixel-art-neutral`
+* `rings`
+* `shapes`
+* `thumbs`
 
 
 ### Formats   
-These are the only supported formats. \
-If you have Pillow (PIL) installed you can convert `DAvatar` to a `PIL.Image.Image` object to get a
-wider range of formats (Pillow doesn't support svg).  
-  
+These are the only supported formats.
+
 * `DFormat.svg` (default)  
 * `DFormat.png`  
 * `DFormat.jpg`  
@@ -117,11 +136,11 @@ wider range of formats (Pillow doesn't support svg).
 
 
 ## Credits  
-Special thanks to [DiceBear](https://github.com/dicebear) ([Florian Körner](https://github.com/FlorianKoerner)) for making this amazing API and to [all artists](https://dicebear.com/licenses) that helped
-making avatars!  
+Special thanks to [DiceBear](https://github.com/dicebear) ([Florian Körner](https://github.com/FlorianKoerner)) for 
+making this amazing API and to [all artists](https://dicebear.com/licenses) for creating these avatars!  
 
 
 ## Licenses and privacy policy  
 - Dicebear **Licenses**: https://dicebear.com/licenses  
 - Dicebear **Privacy Policy**: https://dicebear.com/legal/privacy-policy  
-- Dicebear Python API wrapper (this project): https://github.com/jvherck/dicebear-cli/blob/main/LICENSE
+- Dicebear Python API wrapper (this project): https://dicebear.vhjan.me/license

@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2022 jvherck (https://jvherck.github.io/dicebear/)
+# Copyright (c) 2024 jvherck (https://jvherck.github.io/dicebear/)
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -19,9 +19,8 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-from setuptools import setup
-
-__version__ = "1.0.3"
+from setuptools import setup, find_packages
+from dicebear_cli import __version__
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
@@ -31,35 +30,49 @@ setup(
     version=__version__,
     license="MIT License",
     author="jvherck",
-    author_email="contact@janvh.be",
+    author_email="jan@vhjan.me",
+    maintainer="jvherck",
+    maintainer_email="jan@vhjan.me",
     url="https://github.com/jvherck/dicebear-cli",
-    description="A python CLI for DiceBear's avatar generating API.",
+    project_urls={"Documentation": "https://github.com/jvherck/dicebear-cli/blob/main/README.md", "Source": "https://github.com/jvherck/dicebear-cli", "Tracker": "https://github.com/jvherck/dicebear-cli/issues"},
+    description="A Python CLI for DiceBear's avatar generating API.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    # packages=["dicebear_cli"],
+    packages=find_packages(),
     entry_points={
         "console_scripts": [
             "dicebear=dicebear_cli.__main__:cli"
         ]
     },
     install_requires=['dicebear', 'click'],
-    keywords=['python', 'cli', 'dicebear', 'avatar', 'avatars', 'generating', 'generation', 'generator', 'API',
-              'wrapper', 'image', 'images', 'picture', 'pictures', 'png', 'jpg', 'svg', 'json', 'cli', 'pillow', 'pil',
-              'requests', 'adventurer', 'adventurer-neutral', 'avataaars', 'avataaars-neutral', 'big-ears',
-              'big-ears-neutral', 'big-smile', 'bottts', 'bottts-neutral', 'croodles', 'croodles-neutral', 'fun-emoji',
-              'icons', 'identicon', 'initials', 'lorelei', 'lorelei-neutral', 'micah', 'miniavs', 'open-peeps',
-              'personas', 'pixel-art', 'pixel-art-neutral', 'shapes', 'thumbs'],
+    python_requires='>=3.7',
+    keywords=['python', 'dicebear', 'avatar', 'avatars', 'generating', 'generation', 'generator', 'API', 'wrapper',
+              'image', 'images', 'picture', 'pictures', 'png', 'jpg', 'svg', 'json', 'cli', 'pillow', 'pil', 'requests',
+              'adventurer', 'adventurer-neutral', 'avataaars', 'avataaars-neutral', 'big-ears', 'big-ears-neutral',
+              'big-smile', 'bottts', 'bottts-neutral', 'croodles', 'croodles-neutral', 'fun-emoji', 'icons',
+              'identicon', 'initials', 'lorelei', 'lorelei-neutral', 'micah', 'miniavs', 'notionists',
+              'notionists-neutral', 'open-peeps', 'personas', 'pixel-art', 'pixel-art-neutral', 'shapes', 'thumbs'],
     classifiers=[
-        "Development Status :: 4 - Beta",
+        "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
         "Intended Audience :: Other Audience",
+        "Natural Language :: English",
         "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3 :: Only",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
         "Operating System :: Unix",
         "Operating System :: MacOS", # :: MacOS X
         "Operating System :: Microsoft :: Windows",
         "License :: OSI Approved :: MIT License",
         "Topic :: Artistic Software",
         "Topic :: Games/Entertainment",
-        "Topic :: Multimedia :: Graphics"
+        "Topic :: Multimedia :: Graphics",
+        "Topic :: Other/Nonlisted Topic",
+        "Topic :: Software Development :: Libraries :: Python Modules"
     ]
 )

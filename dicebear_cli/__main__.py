@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2023 jvherck (on GitHub)
+# Copyright (c) 2024 jvherck (on GitHub)
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -21,11 +21,15 @@
 # SOFTWARE.
 
 import click
+from string import ascii_letters, digits
+from random import choices
 from dicebear import *
+
+from __init__ import __version__
 
 
 @click.group()
-@click.version_option(None, "--version", "-v")
+@click.version_option(__version__, "--version", "-v")
 @click.help_option("--help", "-h")
 def cli(): pass
 
@@ -39,7 +43,7 @@ def cli(): pass
               help="The amount of avatars to make at once (they will all have the same style and seed if you add these to the command line, "
                    "leaving these options blank will create multiple random avatars.")
 @click.option("--format", "-f", show_default=True, type=click.STRING, default=DFormat.svg,
-              help="The format of the avatar. All formats can be found on https://github.com/jvherck/dicebear#formats or `DFormat.list`")
+              help="The format of the avatar. Get a list of all formats with `dicebear formats`.")
 @click.help_option("--help", "-h")
 def create(seed: str, style: str, count: int, format: str):
     avs = []
@@ -49,13 +53,15 @@ def create(seed: str, style: str, count: int, format: str):
                        "(that's why only 1 is returned)")
             count = 1
         for _ in range(count):
+            if seed is None:
+                seed = "".join(choices(ascii_letters+digits, k=8))
             av = DAvatar(DStyle.random() if style is None else DStyle.from_str(str(style)), seed)
             if format == DFormat.svg: avs.append(av.url_svg)
             elif format == DFormat.png: avs.append(av.url_png)
             elif format == DFormat.jpg: avs.append(av.url_jpg)
             elif format == DFormat.json: avs.append(av.url_json)
             else:
-                log_error(ImageError("This format is not supported. Check https://github.com/jvherck/dicebear-cli#styles to see all supported formats."))
+                log_error(ImageError("This format is not supported. Use `dicebear formats` to see all supported formats."))
                 return
     except Error as e:
         log_error(e)
@@ -66,7 +72,12 @@ def create(seed: str, style: str, count: int, format: str):
 @cli.command(name="styles", help="See a list of all available styles.")
 @click.help_option("--help", "-h")
 def styles():
-    for style in DStyle.list: click.echo(style)
+    for s in DStyle.list: click.echo(s)
+
+@cli.command(name="formats", help="See a list of all available formats.")
+@click.help_option("--help", "-h")
+def formats():
+    for f in DFormat.list: click.echo(f)
 
 
 if __name__ == '__main__':
