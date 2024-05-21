@@ -31,8 +31,8 @@ from dicebear import *
 def cli(): pass
 
 
-@cli.command(name="create", help="Create one or more new avatars (no customising possible through CLI).")
-@click.argument("style", type=click.STRING, default=None, required=False)
+@cli.command(name="create", help="Create one or more new avatars (no customization possible through CLI). Use `dicebear styles` to get a list of all available styles.")
+@click.argument("style", type=click.STRING, default=None, required=False, metavar="[STYLE]")
 # help="The style of the avatar. All styles can be found on https://avatars.dicebear.com/styles or `DStyle.list`")
 @click.option("--seed", "-s", show_default=True, type=click.STRING, default=None,
               help="The string to create the avatar (USE QUOTATION MARKS IF YOU WANT A MULTIPLE WORD SEED). Every unique string has their own unique avatar.")
@@ -43,7 +43,6 @@ def cli(): pass
               help="The format of the avatar. Get a list of all formats with `dicebear formats`.")
 @click.help_option("--help", "-h")
 def create(seed: str, style: str, count: int, format: str):
-    avs = []
     try:
         if count > 1 and style and seed:
             click.echo("Both a style and seed have been given, generating multiple avatars just gives the same result. "
@@ -53,17 +52,15 @@ def create(seed: str, style: str, count: int, format: str):
             if seed is None:
                 seed = "".join(choices(ascii_letters+digits, k=8))
             av = DAvatar(DStyle.random() if style is None else DStyle.from_str(str(style)), seed)
-            if format == DFormat.svg: avs.append(av.url_svg)
-            elif format == DFormat.png: avs.append(av.url_png)
-            elif format == DFormat.jpg: avs.append(av.url_jpg)
-            elif format == DFormat.json: avs.append(av.url_json)
+            if format == DFormat.svg: click.echo(av.url_svg)
+            elif format == DFormat.png: click.echo(av.url_png)
+            elif format == DFormat.jpg: click.echo(av.url_jpg)
+            elif format == DFormat.json: click.echo(av.url_json)
             else:
                 log_error(ImageError("This format is not supported. Use `dicebear formats` to see all supported formats."))
                 return
     except Error as e:
         log_error(e)
-        return
-    for x in avs: click.echo(x)
 
 
 @cli.command(name="styles", help="See a list of all available styles.")

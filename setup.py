@@ -26,7 +26,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="dicebear-cli",
-    version="1.1.1",
+    version="1.1.2",
     license="MIT License",
     author="jvherck",
     author_email="jan@vhjan.me",
