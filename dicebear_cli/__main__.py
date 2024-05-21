@@ -25,11 +25,8 @@ from string import ascii_letters, digits
 from random import choices
 from dicebear import *
 
-from __init__ import __version__
-
-
 @click.group()
-@click.version_option(__version__, "--version", "-v")
+@click.version_option(None, "--version", "-v")
 @click.help_option("--help", "-h")
 def cli(): pass
 
